@@ -1,0 +1,21 @@
+* {
+    margin: 0 auto 0 auto;
+   
+}
+body {
+  position:relative;
+}
+section {
+  min-height: 100vh;
+}
+
+
+@media(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+

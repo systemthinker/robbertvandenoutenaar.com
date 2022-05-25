@@ -1,48 +1,28 @@
-import './App.scss'
-import {StyledH1 } from './App.sc'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import "./App.css";
+import { StyledH1 } from "./App.sc";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from './components/Home/Home.js'
-import About from './components/About/About.js'
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div>
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            
-          </ul>
-        </nav>
-
+      <Router>
+        <Navbar />
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-         <Route path="/" component={Home} />
-         <Route path="/about" component={About} />
-          
-         
-         
+          <Route path="/" component={Home} />
+          <Route path="/about" component={About} />
         </Routes>
-      </div>
-    </Router> 
-    <div>
-      <StyledH1>
-      app
-      </StyledH1>
-    </div>
+      </Router>
+      <section>
+        <div style={{ height: "1000px" }}>
+          <StyledH1>app</StyledH1>
+        </div>
+      </section>
     </div>
   );
 }

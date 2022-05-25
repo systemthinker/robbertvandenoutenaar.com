@@ -1,7 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StyledH1 = styled.h1.attrs({
-    className: 'scssTest',
-    })`
+export const StyledH1 = styled.h1`
   font-size: 100px;
 `;
